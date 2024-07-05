@@ -8,7 +8,7 @@ const productRoutes=require('./api/routes/products')
 const orderRoutes=require('./api/routes/orders')
 const userRoutes=require("./api/routes/user")
 console.log("process.env.MONGO_ATLAS_PW",process.env.MONGO_ATLAS_PW);
-mongoose.connect('mongodb+srv://sangeethasankar1903:'+process.env.MONGO_ATLAS_PW+'@cluster0.l91q1pa.mongodb.net/hcare?authSource=admin&retryWrites=true&w=majority').then(()=>{
+mongoose.connect('mongodb+srv://sangeethasankar1903:KEp85QbleLAyPIAB@cluster0.l91q1pa.mongodb.net/hcare?authSource=admin&retryWrites=true&w=majority').then(()=>{
     console.log("DB connected Successfullly")
 }).catch(error =>{
     console.log("DB Connection Error....",error)
