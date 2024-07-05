@@ -7,9 +7,11 @@ const mongoose=require('mongoose')
 const productRoutes=require('./api/routes/products')
 const orderRoutes=require('./api/routes/orders')
 const userRoutes=require("./api/routes/user")
-mongoose.connect('mongodb://vasanthrajark:'+process.env.MONGO_ATLAS_PW+'@ac-rln0kig-shard-00-00.thvry6q.mongodb.net:27017,ac-rln0kig-shard-00-01.thvry6q.mongodb.net:27017,ac-rln0kig-shard-00-02.thvry6q.mongodb.net:27017/?ssl=true&replicaSet=atlas-ym9lka-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0').then(()=>{
-    console.log("connection made")
-}).catch(error => console.error(error));;
+mongoose.connect('mongodb+srv://sangeethasankar1903:'+process.env.MONGO_ATLAS_PW+'@cluster0.l91q1pa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(()=>{
+    console.log("DB connected Successfullly")
+}).catch(error =>{
+    console.log("DB Connection Error....",error)
+});;
 
 
 app.use(morgan('dev'))
